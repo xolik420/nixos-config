@@ -1,3 +1,5 @@
+# modules/home-manager/desktop/wofi.nix
+# User Wofi config
 { pkgs, ... }:
 
 {
@@ -8,8 +10,8 @@
       # Layout
       width = 600;
       height = 400;
-      location = "center"; # or "top", "bottom", "left", "right"
-      show = "drun"; # Show applications (drun, run, dmenu)
+      location = "center";
+      show = "drun";
       prompt = "Search...";
       filter_rate = 100;
       allow_markup = true;
@@ -23,13 +25,13 @@
       gtk_dark = true;
 
       # Behavior
-      term = "kitty"; # Terminal for terminal apps
+      term = "kitty";
       hide_scroll = true;
-      matching = "contains"; # or "fuzzy"
+      matching = "contains";
       key_expand = "Tab";
 
       # Columns
-      columns = 1; # Number of columns
+      columns = 1;
     };
 
     style = ''

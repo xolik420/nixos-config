@@ -18,7 +18,7 @@
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./hosts/default/configuration.nix
+        ./hosts/desktop
 
         {
           nixpkgs.overlays = [ nur.overlays.default ];
@@ -29,7 +29,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.tom = import ./hosts/default/home.nix;
+            users.tom = import ./home/tom;
           };
         }
       ];

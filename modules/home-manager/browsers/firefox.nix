@@ -1,53 +1,8 @@
+# modules/home-manager/browsers/firefox.nix
+# Firefox HM settings
 { config, pkgs, lib, ... }:
 
 {
-
-  programs.chromium = {
-    enable = true;
-
-    commandLineArgs = [
-      "--enable-features=UseOzonePlatform,WebRTCPipeWireCapturer"
-      "--ozone-platform=wayland"
-    ];
-
-    extensions = [
-      { id = "nngceckbapebfimnlniiiahkandclblb"; }
-    ];
-  };
-
-  #Progressive WebApps
-  xdg.desktopEntries = {
-    teams-pwa = {
-      name = "Microsoft Teams";
-      exec = "${pkgs.chromium}/bin/chromium --app=https://teams.microsoft.com/v2";
-      icon = "teams";
-      terminal = false;
-      type = "Application";
-      categories = [ "Network" "InstantMessaging" ];
-      startupNotify = true;
-    };
-
-    tcx = {
-      name = "3CX";
-      exec = "${pkgs.chromium}/bin/chromium --app=https://creativetech.il.3cx.us/webclient";
-      icon = "phone";
-      terminal = false;
-      type = "Application";
-      categories = [ "Network" "Telephony" ];
-      startupNotify = true;
-    };
-
-    wvd = {
-      name = "Windows Virtual Desktop";
-      exec = "${pkgs.chromium}/bin/chromium --app=https://client.wvd.microsoft.com";
-      icon = "remote-desktop";
-      terminal = false;
-      type = "Application";
-      categories = [ "Network" "RemoteAccess" ];
-      startupNotify = true;
-    };
-  };
-
   programs.firefox = {
     enable = true;
 
@@ -73,7 +28,7 @@
 
       settings = {
         # Startup
-        "browser.startup.page" = 0; # blank page
+        "browser.startup.page" = 0;
         "browser.startup.homepage" = "about:blank";
         "browser.aboutwelcome.enabled" = false;
         "browser.aboutConfig.showWarning" = false;
@@ -185,7 +140,7 @@
         "browser.xul.error_pages.expert_bad_cert" = true;
 
         # Downloads
-        "browser.download.useDownloadDir" = false; # always ask where to save
+        "browser.download.useDownloadDir" = false;
         "browser.download.always_ask_before_handling_new_types" = true;
         "browser.download.alwaysOpenPanel" = false;
         "browser.download.manager.addToRecentDocs" = false;
@@ -232,7 +187,7 @@
         "browser.shopping.experience2023.enabled" = false;
         "extensions.pocket.enabled" = false;
         "browser.urlbar.pocket.featureGate" = false;
-        "media.eme.enabled" = true; # for DRM content like Netflix
+        "media.eme.enabled" = true;
         "browser.privatebrowsing.forceMediaMemoryCache" = true;
         "accessibility.typeaheadfind.flashBar" = 0;
         "editor.truncate_user_pastes" = false;
@@ -252,13 +207,6 @@
         # Custom CSS support
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
-
-      # You can add bookmarks here if you want them declarative
-      # For now, you can export from Firefox and add them manually
-      #  bookmarks = {
-      #    force = true;
-      #    settings = [];
-      #};
     };
   };
 }

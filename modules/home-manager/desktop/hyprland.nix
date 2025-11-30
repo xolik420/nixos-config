@@ -1,3 +1,5 @@
+# modules/home-manager/desktop/hyprland.nix
+# User Hyprland config
 { config, lib, pkgs, ... }:
 
 {
@@ -224,8 +226,6 @@
         "float, class:^(nm-connection-editor)$"
         "float, class:^(imv)$"
         "float, class:^(org.pulseaudio.pavucontrol)$"
-        # Note: The new windowrule syntax in the original config needs to be converted
-        # to the traditional format for home-manager compatibility
       ];
 
       windowrulev2 = [

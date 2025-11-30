@@ -1,3 +1,5 @@
+# modules/home-manager/desktop/hyprpanel.nix
+# User Hyprpanel config
 { config, lib, pkgs, ... }:
 
 let
@@ -11,7 +13,6 @@ in
       "theme.bar.menus.monochrome" = false;
       "wallpaper.pywal" = false;
       "bar.launcher.autoDetectIcon" = true;
-
 
       "theme.font.size" = "0.9rem";
       "theme.font.name" = "CaskaydiaMono Nerd Font Mono";
@@ -75,7 +76,7 @@ in
       "menus.clock.time.hideSeconds" = false;
       "menus.clock.weather.location" = "Zagreb";
       "menus.clock.weather.unit" = "metric";
-      "menus.clock.weather.key" = ""; # leave empty or put your key here
+      "menus.clock.weather.key" = "";
 
       "bar.clock.showIcon" = true;
       "bar.clock.showTime" = true;
@@ -83,12 +84,12 @@ in
       "theme.bar.buttons.clock.spacing" = "0.8em";
 
       # Dashboard shortcuts
-      "menus.dashboard.shortcuts.left.shortcut1.icon" = "";
+      "menus.dashboard.shortcuts.left.shortcut1.icon" = "";
       "menus.dashboard.shortcuts.left.shortcut1.command" = "firefox";
       "menus.dashboard.shortcuts.left.shortcut1.tooltip" = "Firefox";
 
       "menus.dashboard.shortcuts.left.shortcut2.icon" = "󰝚";
-      "menus.dashboard.shortcuts.left.shortcut3.icon" = "";
+      "menus.dashboard.shortcuts.left.shortcut3.icon" = "";
 
       "menus.dashboard.shortcuts.left.shortcut4.command" = "wofi --show drun";
 
@@ -111,4 +112,3 @@ in
     }
   '';
 }
-
