@@ -22,12 +22,17 @@
     # Browsers
     ../../modules/home-manager/browsers/firefox.nix
     ../../modules/home-manager/browsers/chromium.nix
+    ../../modules/home-manager/browsers/mullvad.nix
 
     # Programs
     ../../modules/home-manager/programs/terminal.nix
+    ../../modules/home-manager/programs/cli.nix
+    ../../modules/home-manager/programs/utilities.nix
     ../../modules/home-manager/programs/media.nix
     ../../modules/home-manager/programs/mail.nix
-    ../../modules/home-manager/programs/utilities.nix
+    ../../modules/home-manager/programs/messaging.nix
+    ../../modules/home-manager/programs/office.nix
+    ../../modules/home-manager/programs/work.nix
     # ../../modules/home-manager/programs/neovim.nix  # uncomment when configured
 
     # PWAs

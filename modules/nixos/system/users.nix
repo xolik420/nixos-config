@@ -6,7 +6,7 @@
   users.users.tom = {
     isNormalUser = true;
     description = "tom";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       tree
     ];

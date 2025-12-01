@@ -36,20 +36,29 @@
         "text/plain" = "nvim.desktop";
 
         # Images
-        "image/jpeg" = "imv.dekstop";
-        "image/png" = "imv.dekstop";
-        "image/gif" = "imv.dekstop";
-        "image/webp" = "imv.dekstop";
-        "image/bmp" = "imv.dekstop";
-        "image/svg+xml" = "imv.dekstop";
+        "image/jpeg" = "imv.desktop";
+        "image/png" = "imv.desktop";
+        "image/gif" = "imv.desktop";
+        "image/webp" = "imv.desktop";
+        "image/bmp" = "imv.desktop";
+        "image/svg+xml" = "imv.desktop";
 
         # Videos
-        "videos/mp4" = "mpv.desktop";
-        "videos/x-matroska" = "mpv.desktop";
-        "videos/webm" = "mpv.desktop";
-        "videos/mpeg" = "mpv.desktop";
-        "videos/x-msvideo" = "mpv.desktop";
-        "videos/quicktime" = "mpv.desktop";
+        "video/mp4" = "mpv.desktop";
+        "video/x-matroska" = "mpv.desktop";
+        "video/webm" = "mpv.desktop";
+        "video/mpeg" = "mpv.desktop";
+        "video/x-msvideo" = "mpv.desktop";
+        "video/quicktime" = "mpv.desktop";
+
+        # Audio
+        "audio/mpeg" = "mpv.desktop";
+        "audio/flac" = "mpv.desktop";
+        "audio/ogg" = "mpv.desktop";
+        "audio/wav" = "mpv.desktop";
+
+        # PDF
+        "application/pdf" = "firefox.desktop";
       };
     };
   };

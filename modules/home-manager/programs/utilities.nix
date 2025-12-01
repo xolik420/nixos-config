@@ -1,23 +1,17 @@
 # modules/home-manager/programs/utilities.nix
-# CLI utilities and system tools
+# GUI utilities and tools
 { config, lib, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
-    # System monitoring
-    htop
-    fastfetch
+    # System monitoring GUI
     mission-center
 
-    # Notifications
-    libnotify
+    # Settings/configuration
+    dconf-editor
 
-    # Network/download tools
-    wget
-    curl
-    git
-
-    # Text editor
-    neovim
+    # Privacy
+    metadata-cleaner
+    bitwarden
   ];
 }
