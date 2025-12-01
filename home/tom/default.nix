@@ -33,7 +33,7 @@
     ../../modules/home-manager/programs/messaging.nix
     ../../modules/home-manager/programs/office.nix
     ../../modules/home-manager/programs/work.nix
-    # ../../modules/home-manager/programs/neovim.nix  # uncomment when configured
+    ../../modules/home-manager/programs/neovim.nix
 
     # PWAs
     ../../pwas/teams.nix

@@ -14,7 +14,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nur, ... }: {
+  outputs = { nixpkgs, home-manager, nur, nixvim, ... }: {
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -29,6 +29,9 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
+            sharedModules = [
+              nixvim.homeManagerModules.nixvim
+            ];
             users.tom = import ./home/tom;
           };
         }

@@ -18,8 +18,5 @@
 
     # Notifications
     libnotify
-
-    # Text editor
-    neovim
   ];
 }
