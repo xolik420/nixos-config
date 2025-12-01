@@ -12,6 +12,6 @@
 
     # Privacy
     metadata-cleaner
-    bitwarden
+    bitwarden-desktop
   ];
 }

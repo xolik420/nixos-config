@@ -1,6 +1,11 @@
 # modules/home-manager/programs/neovim.nix
 # Neovim config via nixvim
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   programs.nixvim = {
@@ -56,23 +61,31 @@
     };
 
     # ===================
+    # Icons
+    # ===================
+
+    plugins.web-devicons.enable = true;
+
+    # ===================
     # File Tree
     # ===================
     plugins.neo-tree = {
       enable = true;
-      closeIfLastWindow = true;
-      window = {
-        width = 30;
-        position = "left";
-      };
-      filesystem = {
-        followCurrentFile = {
-          enabled = true;
+      settings = {
+        closeIfLastWindow = true;
+        window = {
+          width = 30;
+          position = "left";
         };
-        filteredItems = {
-          visible = true;
-          hideDotfiles = false;
-          hideGitignored = false;
+        filesystem = {
+          followCurrentFile = {
+            enabled = true;
+          };
+          filteredItems = {
+            visible = true;
+            hideDotfiles = false;
+            hideGitignored = false;
+          };
         };
       };
     };
@@ -137,11 +150,21 @@
       enable = true;
       settings = {
         signs = {
-          add = { text = "│"; };
-          change = { text = "│"; };
-          delete = { text = "_"; };
-          topdelete = { text = "‾"; };
-          changedelete = { text = "~"; };
+          add = {
+            text = "│";
+          };
+          change = {
+            text = "│";
+          };
+          delete = {
+            text = "_";
+          };
+          topdelete = {
+            text = "‾";
+          };
+          changedelete = {
+            text = "~";
+          };
         };
       };
     };
@@ -247,6 +270,9 @@
     # Extra Packages
     # ===================
     extraPackages = with pkgs; [
+      #Compiler (for treesitter)
+      gcc
+
       # Formatters
       nixfmt-rfc-style
       shfmt

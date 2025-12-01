@@ -14,28 +14,36 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nur, nixvim, ... }: {
-    nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./hosts/desktop
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      nur,
+      nixvim,
+      ...
+    }:
+    {
+      nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/desktop
 
-        {
-          nixpkgs.overlays = [ nur.overlays.default ];
-        }
+          {
+            nixpkgs.overlays = [ nur.overlays.default ];
+          }
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            sharedModules = [
-              nixvim.homeManagerModules.nixvim
-            ];
-            users.tom = import ./home/tom;
-          };
-        }
-      ];
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              sharedModules = [
+                nixvim.homeModules.nixvim
+              ];
+              users.tom = import ./home/tom;
+            };
+          }
+        ];
+      };
     };
-  };
 }
