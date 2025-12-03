@@ -42,7 +42,7 @@
           "Downloads" = " ";
           "Music" = "󰝚 ";
           "Pictures" = " ";
-          "nixos" = " ";
+          "nixos" = " ";
         };
       };
 
