@@ -1,6 +1,11 @@
 # home/tom/default.nix
 # Imports modules/home-manager/* for user tom
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -16,7 +21,7 @@
     # Desktop environment
     ../../modules/home-manager/desktop/hyprland.nix
     ../../modules/home-manager/desktop/hyprpanel.nix
-    ../../modules/home-manager/desktop/wofi.nix
+    ../../modules/home-manager/desktop/rofi.nix
     ../../modules/home-manager/desktop/wayland-tools.nix
 
     # Browsers

@@ -4,7 +4,7 @@
 {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland; # Use rofi-wayland if on Wayland, otherwise pkgs.rofi
+    package = pkgs.rofi;
     terminal = "ghostty";
     location = "center";
 

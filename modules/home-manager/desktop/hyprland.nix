@@ -18,7 +18,7 @@
       # Program variables
       "$terminal" = "ghostty";
       "$fileManager" = "nautilus";
-      "$menu" = "rofi --show drun";
+      "$menu" = "rofi -show drun";
       "$browser" = "firefox";
       "$mainMod" = "SUPER";
 
