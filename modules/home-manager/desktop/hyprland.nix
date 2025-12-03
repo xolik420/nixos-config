@@ -1,6 +1,11 @@
 # modules/home-manager/desktop/hyprland.nix
 # User Hyprland config
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   wayland.windowManager.hyprland = {
@@ -13,7 +18,7 @@
       # Program variables
       "$terminal" = "ghostty";
       "$fileManager" = "nautilus";
-      "$menu" = "wofi --show drun";
+      "$menu" = "rofi --show drun";
       "$browser" = "firefox";
       "$mainMod" = "SUPER";
 
