@@ -30,6 +30,7 @@
     ../../modules/home-manager/browsers/mullvad.nix
 
     # Programs
+    ../../modules/home-manager/programs/shell.nix
     ../../modules/home-manager/programs/terminal.nix
     ../../modules/home-manager/programs/cli.nix
     ../../modules/home-manager/programs/utilities.nix

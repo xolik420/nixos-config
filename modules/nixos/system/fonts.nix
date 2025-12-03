@@ -1,6 +1,11 @@
 # modules/nixos/system/fonts.nix
 # System-wide fonts
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   fonts.packages = with pkgs; [
@@ -18,5 +23,7 @@
     # Nerd Fonts (patched fonts with icons)
     nerd-fonts.caskaydia-mono
     nerd-fonts.ubuntu-sans
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
   ];
 }

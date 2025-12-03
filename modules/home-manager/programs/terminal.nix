@@ -12,6 +12,8 @@
     enable = true;
     settings = {
       theme = "TokyoNight";
+      font-family = "FiraCode Nerd Font";
+      font-size = 14;
     };
   };
 }
