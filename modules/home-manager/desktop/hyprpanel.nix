@@ -1,6 +1,11 @@
 # modules/home-manager/desktop/hyprpanel.nix
 # User Hyprpanel config
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 let
   themeFile = "${pkgs.hyprpanel}/share/themes/catppuccin_mocha.json";
@@ -43,19 +48,58 @@ in
       # Layouts (same on all monitors)
       "bar.layouts" = {
         "0" = {
-          left = [ "dashboard" "workspaces" "windowtitle" ];
-          middle = [ "clock" "notifications" ];
-          right = [ "media" "volume" "network" "bluetooth" "systray" ];
+          left = [
+            "dashboard"
+            "workspaces"
+            "windowtitle"
+          ];
+          middle = [
+            "clock"
+            "notifications"
+          ];
+          right = [
+            "media"
+            "volume"
+            "network"
+            "bluetooth"
+            "systray"
+          ];
         };
         "1" = {
-          left = [ "dashboard" "workspaces" "windowtitle" ];
-          middle = [ "clock" "notifications" ];
-          right = [ "media" "volume" "network" "bluetooth" "systray" ];
+          left = [
+            "dashboard"
+            "workspaces"
+            "windowtitle"
+          ];
+          middle = [
+            "clock"
+            "notifications"
+          ];
+          right = [
+            "media"
+            "volume"
+            "network"
+            "bluetooth"
+            "systray"
+          ];
         };
         "2" = {
-          left = [ "dashboard" "workspaces" "windowtitle" ];
-          middle = [ "clock" "notifications" ];
-          right = [ "media" "volume" "network" "bluetooth" "systray" ];
+          left = [
+            "dashboard"
+            "workspaces"
+            "windowtitle"
+          ];
+          middle = [
+            "clock"
+            "notifications"
+          ];
+          right = [
+            "media"
+            "volume"
+            "network"
+            "bluetooth"
+            "systray"
+          ];
         };
       };
 
@@ -68,7 +112,11 @@ in
       "theme.bar.buttons.windowtitle.spacing" = "1em";
 
       "bar.windowtitle.title_map" = [
-        [ "firefox" "󰈹" "Firefox" ]
+        [
+          "firefox"
+          "󰈹"
+          "Firefox"
+        ]
       ];
 
       # Clock menu
@@ -108,7 +156,7 @@ in
 
   home.file.".config/hyprpanel/modules.scss".text = ''
     .bar_item_box_visible.dashboard {
-      padding: 0 1rem 0 0.6rem;
+      padding: 0 0.6rem 0 0.6rem;
     }
   '';
 }
